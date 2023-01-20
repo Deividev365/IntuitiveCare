@@ -1,1 +1,1 @@
-# IntutiveCare project
+# IntuitiveCare project
