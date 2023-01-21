@@ -10,31 +10,35 @@ USE IntuitiveCare;
 /*Schema de criação da tabela de Relatorio_cadop*/
 
 CREATE TABLE relatorio_cadop(
-id SERIAL PRIMARY KEY,
-registro_ANS INTEGER,
-cnpj VARCHAR(14),
-razão_social VARCHAR(255),
-nome_fantasia VARCHAR(255),
-modalidade VARCHAR(50),
-logradouro VARCHAR(255),
-numero VARCHAR(50),
-complemento VARCHAR(255),
-bairro VARCHAR(255),
-cidade VARCHAR(255),
-uf VARCHAR(2),
-cep VARCHAR(8),
-ddd	VARCHAR(2),
-telefone VARCHAR(9),
-fax VARCHAR(9),
-endereço_eletronico VARCHAR(255),
-representante VARCHAR(255),
-cargo_representante VARCHAR(255),
-data_registro_ANS DATE
+
+	registro_ANS VARCHAR(255) NOT NULL,
+	cnpj VARCHAR(14),
+	razao_social VARCHAR(255),
+	nome_fantasia VARCHAR(255),
+	modalidade VARCHAR(50),
+	logradouro VARCHAR(255),
+	numero VARCHAR(50),
+	complemento VARCHAR(255),
+	bairro VARCHAR(255),
+	cidade VARCHAR(255),
+	uf VARCHAR(2),
+	cep VARCHAR(8),
+	ddd	VARCHAR(2),
+	telefone VARCHAR(9),
+	fax VARCHAR(9),
+	endereço_eletronico VARCHAR(255),
+	representante VARCHAR(255),
+	cargo_representante VARCHAR(255),
+	data_registro_ANS VARCHAR(255),
+
+	PRIMARY KEY(registro_ANS)
+
 );
 
 
 
 /*Schema para criar tabela de dados para copiar os dados em csv*/
+
 CREATE TABLE dados(
 
 	dia  VARCHAR(50),
@@ -48,12 +52,13 @@ CREATE TABLE dados(
 
 /*Queries de load: criar as queries para carregar o conteúdo dos arquivos obtidos nas tarefas de preparação*/
 
-load data local infile 'C:/Users/Deivid/Desktop/IntutiveCare/Schema/Relatorio_cadop.csv' 
+LOAD DATA LOCAL INFILE 'C:/Users/Deivid/Desktop/IntutiveCare/Schema/Relatorio_cadop.csv' 
 
-into table relatorio_cadop
-fields terminated by ';'
-enclosed by '"'
-lines terminated by '\n';
+INTO TABLE relatorio_cadop
+CHARACTER SET latin1
+FIELDS TERMINATED BY ';'
+ENCLOSED by '"'
+lines terminated by '\r\n'
 ignore  1 rows;
 
 
@@ -127,7 +132,7 @@ alter column vl_saldo_final type numeric using(vl_saldo_final::numeric);
 EVENTOS / SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR*/
 
 select 
-	registro_ans,
+	reg_ans,
 	cnpj,
 	razão_social,
 	nome_fantasia,
