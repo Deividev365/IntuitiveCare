@@ -41,18 +41,17 @@ CREATE TABLE relatorio_cadop(
 
 CREATE TABLE dados(
 
-	dia  VARCHAR(50),
-	reg_ans VARCHAR(50),
+	`DATA` DATE,
+	reg_ans VARCHAR(50) NOT NULL,
 	cd_conta_contabil VARCHAR(50),
-	descricao VARCHAR(5000),
-	vl_saldo_final VARCHAR(500)
-
+	descricao VARCHAR(255),
+	vl_saldo_final DOUBLE
 
 );
 
 /*Queries de load: criar as queries para carregar o conteúdo dos arquivos obtidos nas tarefas de preparação*/
 
-LOAD DATA LOCAL INFILE 'C:/Users/Deivid/Desktop/IntutiveCare/Schema/Relatorio_cadop.csv' 
+LOAD DATA LOCAL INFILE 'C:/Users/Deivid/Desktop/IntutiveCare/Schema/Relatorio_cadop.csv'
 
 INTO TABLE relatorio_cadop
 CHARACTER SET latin1
@@ -62,71 +61,98 @@ lines terminated by '\r\n'
 ignore  1 rows;
 
 
-load data local infile 'C:/Users/Deivid/Desktop/IntutiveCare/Schema/1T2021.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/Deivid/Desktop/IntutiveCare/Schema/1T2021.csv'
 
-into table dados
-fields terminated by ';'
-enclosed by '"'
-lines terminated by '\n'
-ignore  1 rows;
+INTO TABLE dados
+CHARACTER SET latin1
+FIELDS TERMINATED BY ';'
+ENCLOSED by '"'
+lines terminated by '\r\n'
+IGNORE  1 ROWS
+(@`DATA`, reg_ans, cd_conta_contabil, descricao, @vl_saldo_final)
+SET `DATA` = STR_TO_DATE(@`DATA`, '%d/%m/%Y'),
+vl_saldo_final = replace(@vl_saldo_final, ',', '.');
 
 
-load data local infile 'C:/Users/Deivid/Desktop/IntutiveCare/Schema/2T2021.csv'
+LOAD DATA LOCAL infile 'C:/Users/Deivid/Desktop/IntutiveCare/Schema/2T2021.csv'
 
-into table dados
-fields terminated by ';'
-enclosed by '"'
-lines terminated by '\n'
-ignore  1 rows;
-
-load data local infile 'C:/Users/Deivid/Desktop/IntutiveCare/Schema/3T2021.csv'
-
-into table dados
-fields terminated by ';'
-enclosed by '"'
-lines terminated by '\n'
-ignore  1 rows;
-
-load data local infile 'C:/Users/Deivid/Desktop/IntutiveCare/Schema/4T2021.csv'
-
-into table dados
-fields terminated by ';'
-enclosed by '"'
-lines terminated by '\n'
-ignore  1 rows;
-
-load data local infile 'C:/Users/Deivid/Desktop/IntutiveCare/Schema/1T2022.csv'
-
-into table dados
-fields terminated by ';'
-enclosed by '"'
-lines terminated by '\n'
-ignore  1 rows;
-
-load data local infile 'C:/Users/Deivid/Desktop/IntutiveCare/Schema/2T2022.csv'
-
-into table dados
-fields terminated by ';'
-enclosed by '"'
-lines terminated by '\n'
-ignore  1 rows;
-
-load data local infile 'C:/Users/Deivid/Desktop/IntutiveCare/Schema/3T2022.csv'
-
-into table dados
-fields terminated by ';'
-enclosed by '"'
-lines terminated by '\n'
-ignore  1 rows;
+INTO TABLE dados
+CHARACTER SET latin1
+FIELDS TERMINATED BY ';'
+ENCLOSED by '"'
+lines terminated by '\r\n'
+IGNORE  1 ROWS
+(@`DATA`, reg_ans, cd_conta_contabil, descricao, @vl_saldo_final)
+SET `DATA` = STR_TO_DATE(@`DATA`, '%d/%m/%Y'),
+vl_saldo_final = replace(@vl_saldo_final, ',', '.');
 
 
 
 
-update dados set vl_saldo_final = replace(vl_saldo_final,',','.');
+LOAD DATA LOCAL infile 'C:/Users/Deivid/Desktop/IntutiveCare/Schema/3T2021.csv'
 
-alter table dados
+INTO TABLE dados
+CHARACTER SET latin1
+FIELDS TERMINATED BY ';'
+ENCLOSED by '"'
+lines terminated by '\r\n'
+IGNORE  1 ROWS
+(@`DATA`, reg_ans, cd_conta_contabil, descricao, @vl_saldo_final)
+SET `DATA` = STR_TO_DATE(@`DATA`, '%d/%m/%Y'),
+vl_saldo_final = replace(@vl_saldo_final, ',', '.');
 
-alter column vl_saldo_final type numeric using(vl_saldo_final::numeric);
+
+LOAD DATA LOCAL infile 'C:/Users/Deivid/Desktop/IntutiveCare/Schema/4T2021.csv'
+
+INTO TABLE dados
+CHARACTER SET latin1
+FIELDS TERMINATED BY ';'
+ENCLOSED by '"'
+lines terminated by '\r\n'
+IGNORE  1 ROWS
+(@`DATA`, reg_ans, cd_conta_contabil, descricao, @vl_saldo_final)
+SET `DATA` = STR_TO_DATE(@`DATA`, '%d/%m/%Y'),
+vl_saldo_final = replace(@vl_saldo_final, ',', '.');
+
+
+LOAD DATA LOCAL infile 'C:/Users/Deivid/Desktop/IntutiveCare/Schema/1T2022.csv'
+
+INTO TABLE dados
+CHARACTER SET latin1
+FIELDS TERMINATED BY ';'
+ENCLOSED by '"'
+lines terminated by '\r\n'
+IGNORE  1 ROWS
+(@`DATA`, reg_ans, cd_conta_contabil, descricao, @vl_saldo_final)
+SET `DATA` = STR_TO_DATE(@`DATA`, '%d/%m/%Y'),
+vl_saldo_final = replace(@vl_saldo_final, ',', '.');
+
+
+LOAD DATA LOCAL infile 'C:/Users/Deivid/Desktop/IntutiveCare/Schema/2T2022.csv'
+
+INTO TABLE dados
+CHARACTER SET latin1
+FIELDS TERMINATED BY ';'
+ENCLOSED by '"'
+lines terminated by '\r\n'
+IGNORE  1 ROWS
+(@`DATA`, reg_ans, cd_conta_contabil, descricao, @vl_saldo_final)
+SET `DATA` = STR_TO_DATE(@`DATA`, '%d/%m/%Y'),
+vl_saldo_final = replace(@vl_saldo_final, ',', '.');
+
+LOAD DATA LOCAL infile 'C:/Users/Deivid/Desktop/IntutiveCare/Schema/3T2022.csv'
+
+INTO TABLE dados
+CHARACTER SET latin1
+FIELDS TERMINATED BY ';'
+ENCLOSED by '"'
+lines terminated by '\r\n'
+IGNORE  1 ROWS
+(@`DATA`, reg_ans, cd_conta_contabil, descricao, @vl_saldo_final)
+SET `DATA` = STR_TO_DATE(@`DATA`, '%d/%m/%Y'),
+vl_saldo_final = replace(@vl_saldo_final, ',', '.');
+
+
 
 /*Pesquisa as 10 maiores operadoras do útlimo trimestre que tiveram despesas com 
 EVENTOS / SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR*/
