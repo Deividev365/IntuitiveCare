@@ -9,8 +9,7 @@ USE IntuitiveCare;
 
 /*Schema de criação da tabela de Relatorio_cadop*/
 
-CREATE TABLE Relatorio_cadop(
-
+CREATE TABLE relatorio_cadop(
 id SERIAL PRIMARY KEY,
 registro_ANS INTEGER,
 cnpj VARCHAR(14),
@@ -31,37 +30,14 @@ endereço_eletronico VARCHAR(255),
 representante VARCHAR(255),
 cargo_representante VARCHAR(255),
 data_registro_ANS DATE
-
 );
 
-/*
-    Relatorio_cadop
-    registro_ANS,
-    cnpj,
-    razão_social,
-    nome_fantasia,
-    modalidade,
-    logradouro,
-    numero,
-    complemento, 
-    bairro,
-    cidade,
-    uf,
-    cep,
-    ddd,
-    telefone,
-    fax,
-    endereço_eletronico,
-    representante,
-    cargo_representante,
-    data_registro_ANS
-*/
 
 
 /*Schema para criar tabela de dados para copiar os dados em csv*/
 CREATE TABLE dados(
 
-	dia DATE,
+	dia  VARCHAR(50),
 	reg_ans VARCHAR(50),
 	cd_conta_contabil VARCHAR(50),
 	descricao VARCHAR(5000),
@@ -72,54 +48,97 @@ CREATE TABLE dados(
 
 /*Queries de load: criar as queries para carregar o conteúdo dos arquivos obtidos nas tarefas de preparação*/
 
-COPY dados(dia, reg_ans, cd_conta_contabil, descricao, vl_saldo_final)
-FROM 'C:\Users\Deivid\Desktop\IntutiveCare\Schema\1T2021.csv'
-delimiter ';'
-csv header
-encoding 'latin1';
+load data local infile 'C:/Users/Deivid/Desktop/IntutiveCare/Schema/Relatorio_cadop.csv' 
 
-COPY dados(dia, reg_ans, cd_conta_contabil, descricao, vl_saldo_final)
-FROM 'C:\Users\Deivid\Desktop\IntutiveCare\Schema\2T2021.csv'
-delimiter ';'
-csv header
-encoding 'latin1';
-
-COPY dados(dia, reg_ans, cd_conta_contabil, descricao, vl_saldo_final)
-FROM 'C:\Users\Deivid\Desktop\IntutiveCare\Schema\3T2021.csv'
-delimiter ';'
-csv header
-encoding 'latin1';
-
-COPY dados(dia, reg_ans, cd_conta_contabil, descricao, vl_saldo_final)
-FROM 'C:\Users\Deivid\Desktop\IntutiveCare\Schema\4T2021.csv'
-delimiter ';'
-csv header
-encoding 'latin1';
+into table relatorio_cadop
+fields terminated by ';'
+enclosed by '"'
+lines terminated by '\n';
+ignore  1 rows;
 
 
-COPY dados(dia, reg_ans, cd_conta_contabil, descricao, vl_saldo_final)
-FROM 'C:\Users\Deivid\Desktop\IntutiveCare\Schema\1T2022.csv'
-delimiter ';'
-csv header
-encoding 'latin1';
+load data local infile 'C:/Users/Deivid/Desktop/IntutiveCare/Schema/1T2021.csv'
 
-COPY dados(dia, reg_ans, cd_conta_contabil, descricao, vl_saldo_final)
-FROM 'C:\Users\Deivid\Desktop\IntutiveCare\Schema\2T2022.csv'
-delimiter ';'
-csv header
-encoding 'latin1';
+into table dados
+fields terminated by ';'
+enclosed by '"'
+lines terminated by '\n'
+ignore  1 rows;
 
 
-COPY dados(dia, reg_ans, cd_conta_contabil, descricao, vl_saldo_final)
-FROM 'C:\Users\Deivid\Desktop\IntutiveCare\Schema\3T2022.csv'
-delimiter ';'
-csv header
-encoding 'latin1';
+load data local infile 'C:/Users/Deivid/Desktop/IntutiveCare/Schema/2T2021.csv'
 
+into table dados
+fields terminated by ';'
+enclosed by '"'
+lines terminated by '\n'
+ignore  1 rows;
+
+load data local infile 'C:/Users/Deivid/Desktop/IntutiveCare/Schema/3T2021.csv'
+
+into table dados
+fields terminated by ';'
+enclosed by '"'
+lines terminated by '\n'
+ignore  1 rows;
+
+load data local infile 'C:/Users/Deivid/Desktop/IntutiveCare/Schema/4T2021.csv'
+
+into table dados
+fields terminated by ';'
+enclosed by '"'
+lines terminated by '\n'
+ignore  1 rows;
+
+load data local infile 'C:/Users/Deivid/Desktop/IntutiveCare/Schema/1T2022.csv'
+
+into table dados
+fields terminated by ';'
+enclosed by '"'
+lines terminated by '\n'
+ignore  1 rows;
+
+load data local infile 'C:/Users/Deivid/Desktop/IntutiveCare/Schema/2T2022.csv'
+
+into table dados
+fields terminated by ';'
+enclosed by '"'
+lines terminated by '\n'
+ignore  1 rows;
+
+load data local infile 'C:/Users/Deivid/Desktop/IntutiveCare/Schema/3T2022.csv'
+
+into table dados
+fields terminated by ';'
+enclosed by '"'
+lines terminated by '\n'
+ignore  1 rows;
+
+
+
+
+update dados set vl_saldo_final = replace(vl_saldo_final,',','.');
+
+alter table dados
+
+alter column vl_saldo_final type numeric using(vl_saldo_final::numeric);
 
 /*Pesquisa as 10 maiores operadoras do útlimo trimestre que tiveram despesas com 
 EVENTOS / SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR*/
 
-SELECT registro_ANS, cnpj, razão_social, nome_fantasia
+select 
+	registro_ans,
+	cnpj,
+	razão_social,
+	nome_fantasia,
+	sum(vl_saldo_final) as saldo_final
+from dados d 
+left join relatorio_cadop r 
+on d.reg_ans = r.registro_ans
+where  descricao = 'EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR' and dia >= '01/07/2021' 
+group by registro_ans, cnpj, razão_social, nome_fantasia
+order by saldo_final desc
+limit 10;
+
 
 
