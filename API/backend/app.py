@@ -9,11 +9,15 @@ CORS(app)
 
 with app.app_context():
     
+    ## mysql + mariaDB connection settings ##
+
     app.config['SQLALCHEMY_DATABASE_URI'] = "mysql://root@localhost:3306/intuitivecare"
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 ma = Marshmallow(app)
+
+## class to create the database model ##
 
 class api_relatorio_cadop(db.Model):
     __tablename__ = 'api_relatorio_cadop'
@@ -37,6 +41,8 @@ class api_relatorio_cadop(db.Model):
     cargo_representante = db.Column(db.String(255))
     data_registro_ANS = db.Column(db.Date)
 
+## class to set the database fields ##
+
 class api_relatorio_cadop_Schema(ma.Schema):
     class Meta:
         fields = ('registro_ANS', 'cnpj','razao_social', 'nome_fantasia', 'modalidade', 'logradouro', 'numero', 'complemento', 'bairro', 'cidade', 'uf', 'cep',
@@ -47,7 +53,8 @@ relacao_schema = api_relatorio_cadop_Schema()
 relacao_schema = api_relatorio_cadop_Schema(many = True)
 
 
-    
+    ## Setting up first route to GET all the data
+
 @app.route('/', methods= ['GET'])
 def get_db():
     all_db = api_relatorio_cadop.query.all()
