@@ -49,7 +49,7 @@ CREATE TABLE dados(
 
 );
 
-/*Queries de load: criar as queries para carregar o conteúdo dos arquivos obtidos nas tarefas de preparação*/
+/*Queries de load: criar as queries para carregar o conteúdo dos arquivos .csv obtidos nas tarefas de preparação*/
 
 LOAD DATA LOCAL INFILE 'C:/Users/Deivid/Desktop/IntutiveCare/Schema/Relatorio_cadop.csv'
 
@@ -157,19 +157,39 @@ vl_saldo_final = replace(@vl_saldo_final, ',', '.');
 /*Pesquisa as 10 maiores operadoras do útlimo trimestre que tiveram despesas com 
 EVENTOS / SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR*/
 
-select 
-	reg_ans,
-	cnpj,
-	razão_social,
-	nome_fantasia,
-	sum(vl_saldo_final) as saldo_final
-from dados d 
-left join relatorio_cadop r 
-on d.reg_ans = r.registro_ans
-where  descricao = 'EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR' and dia >= '01/07/2021' 
-group by registro_ans, cnpj, razão_social, nome_fantasia
-order by saldo_final desc
-limit 10;
 
+SELECT dados.reg_ans,
+relatorio_cadop.razao_social,
+dados.descricao,
+SUM(dados.vl_saldo_final) as saldo_final_trimestre
+FROM dados
+INNER JOIN relatorio_cadop
+ON dados.reg_ans = relatorio_cadop.registro_ANS
+WHERE descricao = "EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR"
+AND `DATA` = "2022-01-01"
+GROUP BY dados.reg_ans
+ORDER BY saldo_final_trimestre DESC
+LIMIT 10;
+
+
+
+
+/*Pesquisa as 10 operadoras que mais tiveram despesas com "EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS
+  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR" no último ano? */
+
+
+
+SELECT dados.reg_ans,
+relatorio_cadop.razao_social,
+dados.descricao,
+SUM(dados.vl_saldo_final) as saldo_final_total
+FROM dados
+INNER JOIN relatorio_cadop
+ON dados.reg_ans = relatorio_cadop.registro_ANS
+WHERE descricao = "EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR"
+AND `DATA` BETWEEN "2022-01-01" AND "2022-12-31"
+GROUP by dados.reg_ans
+ORDER BY saldo_final_total DESC
+LIMIT 10;
 
 
