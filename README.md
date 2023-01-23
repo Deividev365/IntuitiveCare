@@ -146,7 +146,7 @@ py scraping.py
 <br>
 
 <div align="center">
-<img  width="900" height="300" src="https://user-images.githubusercontent.com/61792159/214111722-f8978601-ebce-46cc-a910-39de5c6c70f3.png" alt="Arquitetura-Tecnica-webScraping" />
+<img  width="700" height="250" src="https://user-images.githubusercontent.com/61792159/214111722-f8978601-ebce-46cc-a910-39de5c6c70f3.png" alt="Arquitetura-Tecnica-webScraping" />
 </div>
 <br>
 <li>Foi realizado a padronização de commits do projeto, garantindo o desenvolvimento contínuo, melhor entendimento das mudanças realizadas ao longo da codificação</li>
