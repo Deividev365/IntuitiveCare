@@ -50,7 +50,7 @@ export default {
 
     methods:{
         post_consulta(){
-            fetch('http://127.0.0.1:5000/postconsulta', {
+            fetch('http://127.0.0.1:5000/add', {
                 method: "POST",
                 headers:{"Content-Type":"application/json"
                 },
@@ -69,10 +69,6 @@ export default {
                 console.log(error)
             })
         },
-        
-
-     
-       
     },
     created(){
     },
