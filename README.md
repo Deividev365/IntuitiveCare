@@ -39,7 +39,7 @@ O objetivo do projeto é resolver os **4 desafios** propostos pela empresa intui
 <li>SQLAlchemy</li>
 <li>MongoDB</li>
 <li>Vue.js</li>
-<li>BootStrap</li>
+<li>Bootstrap</li>
 
 
 ## 🚀 Arquitetura
@@ -52,7 +52,7 @@ Apresentando a arquitetura técnica, incluindo tecnologias que foram utilizadas 
 
 <br>
 <br>
-<img width="1000" height="400" src="https://user-images.githubusercontent.com/61792159/214070249-f043acca-a99f-49b0-b495-c173f7003c88.png" alt="PRs welcome!" />
+<img width="1000" height="400" src="https://user-images.githubusercontent.com/61792159/214070249-f043acca-a99f-49b0-b495-c173f7003c88.png" alt="Arquitetura-Tecnica-API" />
 <h3 align="center">API</h3>
 
 
@@ -60,22 +60,50 @@ Apresentando a arquitetura técnica, incluindo tecnologias que foram utilizadas 
 
 <li> Desafio 1 - WebScraping</li>
      <br>
-   <p>Aplicando os conceitos de WebScraping, utilizando a biblioteca BeautifulSoup, o projeto se encontra na pasta WebScraping, contendo todo o código que foi utilizado para gerar os scripts de scrape</p>
+   <p>Aplicando os conceitos de WebScraping, utilizando a biblioteca BeautifulSoup, o projeto se encontra na pasta **WebScraping**, contendo todos os códigos que foram utilizados para resolver o problema.</p>
+   
+ ```
+cd WebScraping/
+```
+
+ ```
+py scraping.py
+```
 
 
 <li> Desafio 2 - Transformar Dados</li>
      <br>
-   <p>source code na pasta transformData</p>
-   
+   <p>Ao utilizar a biblioteca ZipFile, foi realizado o processo de transformação dos dados, convertendo arquivos .pdf para .csv, além de substituir palavras dentro de um arquivo .csv, por fim, compactando todos os arquivos no formato .zip</p>
+
+```
+  cd transformData/
+
+```
+
+```
+  py transformData.py
+  
+```
+ 
    
 <li> Desafio 3 - Banco de Dados</li>
      <br>
-   <p>source code Schema</p>
+   <p>Realizado o load de dados .csv dentro de uma estrutura de um banco relacional, utilizando o MariaDB para realizar os testes locais. Criado o Schema do banco  com as devidas tabelas para suportar a migração dos dados .csv. Além disso, realizado as consultas para responder as perguntas solicitidas e gerando os valores esperados a partir dos dados obtidos.</p>
+
+```
+  cd Schema/
+  
+```
    
    
 <li> Desafio 4 - API</li>
      <br>
-   <p>source code API</p>
+   <p>Criado uma interface web simples utilizando Vue, para apresentar os dados obtidos da base de dados, utilizando o Flask, para criar a modelagem e inserções no banco de dados local</p>
+   
+   <span>Json retornado do Postman com os dados testes</span>
+   <div align="center">
+   <img sc="https://user-images.githubusercontent.com/61792159/214106987-b01b60f5-3cfd-4c0c-878c-30ac7945f84f.png" alt="Arquitetura-Tecnica-webScraping" />
+  </div>
 
 ## 🚀 Features
 
@@ -94,7 +122,9 @@ Apresentando a arquitetura técnica, incluindo tecnologias que foram utilizadas 
 
 ## 🚀 Contato
 
+<img  width="100" height="100" src="https://user-images.githubusercontent.com/61792159/214099732-d4ee7bba-8837-4ac5-88e5-fb6d2b1c1e6e.jpg" alt="Arquitetura-Tecnica-webScraping" />
+
+
 <li><a href="https://www.linkedin.com/in/deivid-almeida-378ab9191/" target="_blank">Linkedin</a></li>
-<li><a href="https://www.linkedin.com/in/deivid-almeida-378ab9191/" target="_blank">Medium (Meu Blog)</a></li>
-<li><a href="https://www.linkedin.com/in/deivid-almeida-378ab9191/" target="_blank">Youtube</a></li>
-<li><a href="https://www.linkedin.com/in/deivid-almeida-378ab9191/" target="_blank"></a></li>
+<li><a href="https://medium.com/@deividalmeida365" target="_blank">Medium (Meu Blog)</a></li>
+<li><a href="https://www.youtube.com/@jovemcode5199/featured" target="_blank">Youtube</a></li>
