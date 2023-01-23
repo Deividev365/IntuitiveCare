@@ -135,11 +135,8 @@ py scraping.py
 
 - [x] Realizar Download de arquivos
 - [x] Importar dados Banco de Dados
-- [x] 
-- [x] Importar dados Banco de Dados
-- [x] Importar dados Banco de Dados
-
-- [ ] Cadastro de produtos
+- [x] Ler arquivos .csv
+- [x] Requisições GET
 
 
 ## 🚀 Boas Praticas
