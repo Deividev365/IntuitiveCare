@@ -43,7 +43,7 @@ O objetivo do projeto é resolver os **4 desafios** propostos pela empresa intui
 
 
 ## 🚀 Arquitetura
-<img width="1000" height="350" src="https://user-images.githubusercontent.com/61792159/214063937-92cc0d34-07ac-4c55-b0b1-cf6efb119ad0.png" alt="PRs welcome!" />
+<img width="1000" height="400" src="https://user-images.githubusercontent.com/61792159/214063937-92cc0d34-07ac-4c55-b0b1-cf6efb119ad0.png" alt="PRs welcome!" />
 
 ## 🚀 Desafios
 
