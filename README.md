@@ -37,7 +37,7 @@ O objetivo do projeto é resolver os **4 desafios** propostos pela empresa intui
 <li>BeautifulSoup</li>
 <li>Flask</li>
 <li>SQLAlchemy</li>
-<li>MongoDB</li>
+<li>MariaDB</li>
 <li>Vue.js</li>
 <li>Bootstrap</li>
 
