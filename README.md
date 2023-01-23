@@ -10,19 +10,21 @@ Table of contents
 <!--ts-->
    * [Objetivo](#objetivo)
    * [Tecnologias](#tecnologias)
-   * [Tests](#tests)
-   * [Dependency](#dependency)
-   * [Docker](#docker)
+   * [Arquitetura](#arquitetura)
+   * [Features](#dependency)
+   * [Projeto](#docker)
    
 <!--te-->
 
 
-# <a name="objetivo"Objetivo
+# Objetivo
+
 
 O objetivo do projeto é resolver os 4 desafios propostos pela empresa intuitiveCare, apresentando os conceitos técnicos solicitado, aplicando boas práticas de desenvolvimento de software e metodologia.
 
 
 # Tecnologias 🎯
+
 
 <li>Python</li> 
 <li>Flask</li>
@@ -35,7 +37,6 @@ O objetivo do projeto é resolver os 4 desafios propostos pela empresa intuitive
 
 
 Arquitetura
---------------
 
 
 ### Features
