@@ -1,5 +1,5 @@
  <h1 align="center">Processo Seletivo IntuitiveCare 🎯</h1>
- <br>
+
  <p align="center">
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -10,7 +10,7 @@
  <a href="#-contato">Contato</a>
 
 </p>
-
+<br>
 
 <p align="center">
  <img src="https://img.shields.io/static/v1?label=PRs&message=welcome&color=49AA26&labelColor=000000" alt="PRs welcome!" />
