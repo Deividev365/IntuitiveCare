@@ -9,7 +9,7 @@ Table of contents
 
 <!--ts-->
    * [Objetivo](#objetivo)
-   * [Tecnologias](#tecnologias)
+   * [Tecnologias](#Tecnologias)
    * [Arquitetura](#arquitetura)
    * [Features](#dependency)
    * [Projeto](#docker)
