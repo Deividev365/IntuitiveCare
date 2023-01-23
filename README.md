@@ -43,7 +43,18 @@ O objetivo do projeto é resolver os **4 desafios** propostos pela empresa intui
 
 
 ## 🚀 Arquitetura
-<img width="1000" height="400" src="https://user-images.githubusercontent.com/61792159/214063937-92cc0d34-07ac-4c55-b0b1-cf6efb119ad0.png" alt="PRs welcome!" />
+
+Apresentando a arquitetura técnica, incluindo tecnologias que foram utilizadas no projeto, o relacionamento e integrações realizadas, protócolos de comunicação, entregando visibilidade das ferramentas que foram adotadas e padrões que podem ser utilizados em outros projetos.
+<br>
+<br>
+<img width="1000" height="400" src="https://user-images.githubusercontent.com/61792159/214063937-92cc0d34-07ac-4c55-b0b1-cf6efb119ad0.png" alt="Arquitetura-Tecnica-webScraping" />
+ <h3 align="center">ssss</h3>
+
+<br>
+<br>
+<img width="1000" height="400" src="https://user-images.githubusercontent.com/61792159/214070249-f043acca-a99f-49b0-b495-c173f7003c88.png" alt="PRs welcome!" />
+<h3 align="center">ssss</h3>
+
 
 ## 🚀 Desafios
 
