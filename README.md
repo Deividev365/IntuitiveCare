@@ -1,27 +1,38 @@
  <h1 align="center">Processo Seletivo IntuitiveCare 🎯</h1>
+ 
+ <p align="center">
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+ <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-arquitetura">Arquitetura</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-desafios">Desafios</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+   <a href="#-features">Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-boas-praticas">Boas Práticas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+ <a href="#-contato">Contato</a>
+
+</p>
+
+
+<p align="center">
+ <img src="https://img.shields.io/static/v1?label=PRs&message=welcome&color=49AA26&labelColor=000000" alt="PRs welcome!" />
+
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
+</p>
+
+
 <br>
+
+
 <div align="center">
 <img align="center" src="https://user-images.githubusercontent.com/61792159/213949486-72b87e07-239a-4a73-b623-8bab19ab0b57.jpg" alt="intuitiveCare-logo" width="250" height="250">
 </div>
 
 
-# Conteúdo
+## 🚀 Projeto
+O objetivo do projeto é resolver os **4 desafios** propostos pela empresa intuitiveCare, apresentando os conceitos técnicos solicitados, aplicando boas práticas de desenvolvimento de software.
 
-- [Objetivo](#-objetivo)
-- [Building your first React Native app](#-building-your-first-react-native-app)
-- [Documentation](#-documentation)
-- [Upgrading](#-upgrading)
-- [How to Contribute](#-how-to-contribute)
-- [Code of Conduct](#code-of-conduct)
-- [License](#-license)
+## 🚀 Tecnologias
 
 
-# Objetivo 🎯
-
-O objetivo do projeto é resolver os 4 desafios propostos pela empresa intuitiveCare, apresentando os conceitos técnicos solicitado, aplicando boas práticas de desenvolvimento de software e metodologia.
-
-
-# Tecnologias 💻
 <li>Python</li> 
 <li>Flask</li>
 <li>SQLAlchemy</li>
@@ -30,8 +41,13 @@ O objetivo do projeto é resolver os 4 desafios propostos pela empresa intuitive
 <li>BootSrap</li>
 
 
-Arquitetura
+## 🚀 Arquitetura
 
+
+## 🚀 Desafios
+
+
+## 🚀 Features
 
 ### Features
 
@@ -39,8 +55,14 @@ Arquitetura
 - [x] Cadastro de cliente
 - [ ] Cadastro de produtos
 
-Boas Práticas
---------------
+
+## 🚀 Boas Praticas
+
+
+
+## 🚀 Contato
+
+
 
 
 
