@@ -79,8 +79,12 @@ Apresentando a arquitetura técnica, incluindo tecnologias que foram utilizadas 
 
 ## 🚀 Features
 
-- [x] Cadastro de usuário
-- [x] Cadastro de cliente
+- [x] Realizar Download de arquivos
+- [x] Importar dados Banco de Dados
+- [x] 
+- [x] Importar dados Banco de Dados
+- [x] Importar dados Banco de Dados
+
 - [ ] Cadastro de produtos
 
 
@@ -90,9 +94,13 @@ Apresentando a arquitetura técnica, incluindo tecnologias que foram utilizadas 
 
 ## 🚀 Contato
 
-Feito com carinho por Deivid Almeida
+Feito com carinho por Deivid Almeida 
 
-Linkedin
+<a target="_blank" href="https://www.linkedin.com/in/deivid-almeida-378ab9191/">
+<img width="50" height="50" src="https://user-images.githubusercontent.com/61792159/214097202-38bbebe2-2447-4acf-a609-8685024f6f8b.svg" alt="Arquitetura-Tecnica-webScraping" />
+</a>
+
+
 Medium
 E-mail
 Youtube
