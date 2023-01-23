@@ -23,7 +23,7 @@
 
 
 <div align="center">
-<img align="center" src="https://user-images.githubusercontent.com/61792159/213949486-72b87e07-239a-4a73-b623-8bab19ab0b57.jpg" alt="intuitiveCare-logo" width="250" height="250">
+<img align="center" src="https://user-images.githubusercontent.com/61792159/213949486-72b87e07-239a-4a73-b623-8bab19ab0b57.jpg" alt="intuitiveCare-logo">
 </div>
 
 
@@ -43,7 +43,7 @@ O objetivo do projeto é resolver os **4 desafios** propostos pela empresa intui
 
 
 ## 🚀 Arquitetura
-
+<img width="1000" height="350" src="https://user-images.githubusercontent.com/61792159/214063937-92cc0d34-07ac-4c55-b0b1-cf6efb119ad0.png" alt="PRs welcome!" />
 
 ## 🚀 Desafios
 
