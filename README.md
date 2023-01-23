@@ -47,12 +47,16 @@ O objetivo do projeto é resolver os **4 desafios** propostos pela empresa intui
 Apresentando a arquitetura técnica, incluindo tecnologias que foram utilizadas no projeto, o relacionamento e integrações realizadas, protócolos de comunicação, entregando visibilidade das ferramentas que foram adotadas e padrões que podem ser utilizados em outros projetos.
 <br>
 <br>
-<img width="1000" height="400" src="https://user-images.githubusercontent.com/61792159/214063937-92cc0d34-07ac-4c55-b0b1-cf6efb119ad0.png" alt="Arquitetura-Tecnica-webScraping" />
+<div align="center">
+<img width="900" height="400" src="https://user-images.githubusercontent.com/61792159/214063937-92cc0d34-07ac-4c55-b0b1-cf6efb119ad0.png" alt="Arquitetura-Tecnica-webScraping" />
+ </div>
  <h3 align="center">WebScraping</h3>
 
 <br>
 <br>
-<img width="1000" height="400" src="https://user-images.githubusercontent.com/61792159/214070249-f043acca-a99f-49b0-b495-c173f7003c88.png" alt="Arquitetura-Tecnica-API" />
+<div align="center">
+<img width="900" height="400" src="https://user-images.githubusercontent.com/61792159/214070249-f043acca-a99f-49b0-b495-c173f7003c88.png" alt="Arquitetura-Tecnica-API" />
+ </div>
 <h3 align="center">API</h3>
 
 
@@ -100,10 +104,32 @@ py scraping.py
      <br>
    <p>Criado uma interface web simples utilizando Vue, para apresentar os dados obtidos da base de dados, utilizando o Flask, para criar a modelagem e inserções no banco de dados local</p>
    
-   <span>Json retornado do Postman com os dados testes</span>
+```
+  cd API/backend
+  
+```
    <div align="center">
-   <img sc="https://user-images.githubusercontent.com/61792159/214106987-b01b60f5-3cfd-4c0c-878c-30ac7945f84f.png" alt="Arquitetura-Tecnica-webScraping" />
+   <img width="550" src="https://user-images.githubusercontent.com/61792159/214106987-b01b60f5-3cfd-4c0c-878c-30ac7945f84f.png" alt="Arquitetura-Tecnica-webScraping" />
   </div>
+  <br>
+<p>Iniciar o projeto Vue</p>
+
+```
+  cd API/frontend
+  
+```
+
+```
+  npm install
+  
+```
+
+```
+  npm run serve
+  
+```
+
+
 
 ## 🚀 Features
 
