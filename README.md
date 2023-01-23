@@ -7,6 +7,9 @@
 Tecnologias Utilizadas
 --------------
 
+Motivação Escolha Tecnologias
+--------------
+
 Arquitetura
 --------------
 
