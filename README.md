@@ -17,7 +17,7 @@ Table of contents
 <!--te-->
 
 
-# <a name=""Objetivo
+# <a name="objetivo"Objetivo
 
 O objetivo do projeto é resolver os 4 desafios propostos pela empresa intuitiveCare, apresentando os conceitos técnicos solicitado, aplicando boas práticas de desenvolvimento de software e metodologia.
 
