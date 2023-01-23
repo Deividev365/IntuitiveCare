@@ -144,7 +144,45 @@ py scraping.py
 
 ## 🚀 Boas Praticas
 
+<h2>Gestão e Metodologia</h2>
+<li>Foi utilizado o sistema de issues do github para gerenciar o projeto, garantindo o melhor entendimento e melhor acompanhamento. </li>
+<br>
 
+<div align="center">
+<img  width="900" height="300" src="https://user-images.githubusercontent.com/61792159/214111722-f8978601-ebce-46cc-a910-39de5c6c70f3.png" alt="Arquitetura-Tecnica-webScraping" />
+</div>
+<br>
+<li>Foi realizado a padronização de commits do projeto, garantindo o desenvolvimento contínuo, melhor entendimento das mudanças realizadas ao longo da codificação</li>
+<br>
+
+```
+template: testName/feature/featureName/featureStatus
+
+Exemplo: test04/feature/front end settings/finishing front end
+
+```
+<h2>Desenvolvimento</h2>
+li>Isolar responsabilidades em pequenas funções em um arquivo "modules", ao criar arquivos independentes, garantimos a manuntenção futura do projeto ou incrementos</li>
+
+```
+def zip_files(files: list[str], dest):
+    
+    with ZipFile(dest, "w") as zip_:
+        print(f"Argupando em: {os.path.abspath(dest)}")
+        for file in files:
+            zip_.write(file, file.split("/")[-1])
+            
+  ```
+  ```
+        modules.zip_files(files_path, path + "deivid.zip")
+  ```
+
+
+<li>Organizando o projeto em pastas independente</li>
+<br>
+<div align="center">
+<img  width="250" height="300" src="https://user-images.githubusercontent.com/61792159/214113527-c57bb6ba-f26a-4e16-a274-b61e0be2b923.png" alt="Arquitetura-Tecnica-webScraping" />
+</div>
 
 ## 🚀 Contato
 
