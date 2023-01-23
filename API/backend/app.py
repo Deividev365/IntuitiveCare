@@ -62,6 +62,41 @@ def get_db():
     return jsonify(results)
 
 
+@app.route('/add', methods = ['GET', 'POST'])
+def get_query():
+    reqs = requestflask.get_json() 
+    print(reqs)
+
+    if len(reqs) != 0:
+        if reqs['consulta'] != '':
+                textoconsulta = reqs['consulta']
+                print(textoconsulta)
+                consulta = api_relatorio_cadop.query.filter((api_relatorio_cadop.registro_ans == textoconsulta) | (api_relatorio_cadop.cnpj == textoconsulta) |
+                (api_relatorio_cadop.razao_social == textoconsulta) | (api_relatorio_cadop.nome_fantasia == textoconsulta) | (api_relatorio_cadop.modalidade == textoconsulta) |
+                (api_relatorio_cadop.logradouro == textoconsulta) | (api_relatorio_cadop.numero == textoconsulta) |(api_relatorio_cadop.complemento == textoconsulta) |
+                (api_relatorio_cadop.bairro == textoconsulta) | (api_relatorio_cadop.cidade == textoconsulta) | (api_relatorio_cadop.uf == textoconsulta) | (api_relatorio_cadop.cep == textoconsulta) |(api_relatorio_cadop.ddd == textoconsulta)|
+                (api_relatorio_cadop.telefone == textoconsulta) |(api_relatorio_cadop.fax == textoconsulta) | (api_relatorio_cadop.endereco_eletronico == textoconsulta) | (api_relatorio_cadop.representante == textoconsulta) |(api_relatorio_cadop.representante_cargo == textoconsulta) |(api_relatorio_cadop.data_registroans == textoconsulta) ).all()
+                
+                results = relacao_schema.dump(consulta)
+                
+                return jsonify(results)
+                
+        return 'None'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)
