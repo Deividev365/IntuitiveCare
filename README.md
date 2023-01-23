@@ -39,7 +39,7 @@ O objetivo do projeto é resolver os **4 desafios** propostos pela empresa intui
 <li>SQLAlchemy</li>
 <li>MongoDB</li>
 <li>Vue.js</li>
-<li>BootSrap</li>
+<li>BootStrap</li>
 
 
 ## 🚀 Arquitetura
