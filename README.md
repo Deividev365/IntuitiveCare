@@ -33,7 +33,8 @@ O objetivo do projeto é resolver os **4 desafios** propostos pela empresa intui
 ## 🚀 Tecnologias
 
 
-<li>Python</li> 
+<li>Python</li>
+<li>BeautifulSoup</li>
 <li>Flask</li>
 <li>SQLAlchemy</li>
 <li>MongoDB</li>
@@ -46,10 +47,26 @@ O objetivo do projeto é resolver os **4 desafios** propostos pela empresa intui
 
 ## 🚀 Desafios
 
+<li> Desafio 1 - WebScraping</li>
+     <br>
+   <p>Aplicando os conceitos de WebScraping, utilizando a biblioteca BeautifulSoup, o projeto se encontra na pasta WebScraping, contendo todo o código que foi utilizado para gerar os scripts de scrape</p>
+
+
+<li> Desafio 2 - Transformar Dados</li>
+     <br>
+   <p>source code na pasta transformData</p>
+   
+   
+<li> Desafio 3 - Banco de Dados</li>
+     <br>
+   <p>source code Schema</p>
+   
+   
+<li> Desafio 4 - API</li>
+     <br>
+   <p>source code API</p>
 
 ## 🚀 Features
-
-### Features
 
 - [x] Cadastro de usuário
 - [x] Cadastro de cliente
@@ -61,32 +78,6 @@ O objetivo do projeto é resolver os **4 desafios** propostos pela empresa intui
 
 
 ## 🚀 Contato
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 Feito com carinho por Deivid Almeida
 
