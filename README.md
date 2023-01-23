@@ -96,7 +96,7 @@ Apresentando a arquitetura técnica, incluindo tecnologias que foram utilizadas 
 
 Feito com carinho por Deivid Almeida 
 
-<a target="_blank" href="https://www.linkedin.com/in/deivid-almeida-378ab9191/">
+<a  href="https://www.linkedin.com/in/deivid-almeida-378ab9191/" target="_blank">
 <img width="50" height="50" src="https://user-images.githubusercontent.com/61792159/214097202-38bbebe2-2447-4acf-a609-8685024f6f8b.svg" alt="Arquitetura-Tecnica-webScraping" />
 </a>
 
