@@ -1,13 +1,13 @@
-/*Criar banco de dados*/
+/*  create database */
 
 CREATE DATABASE IntuitiveCare;
 
-/*Usar o banco de dados*/
+/*  Use created daatabase */
 
 USE IntuitiveCare;
 
 
-/*Schema de criação da tabela de Relatorio_cadop*/
+/*  Schema model to create table "relatorio_cadop"  */
 
 CREATE TABLE relatorio_cadop(
 
@@ -37,7 +37,7 @@ CREATE TABLE relatorio_cadop(
 
 
 
-/*Schema para criar tabela de dados para copiar os dados em csv*/
+/*  Schema model to create table "dados" to copy data from csv files  */
 
 CREATE TABLE dados(
 
@@ -49,7 +49,7 @@ CREATE TABLE dados(
 
 );
 
-/*Queries de load: criar as queries para carregar o conteúdo dos arquivos .csv obtidos nas tarefas de preparação*/
+/*  Queries to load to load files .csv saved locally into the database tables created  */
 
 LOAD DATA LOCAL INFILE 'C:/Users/Deivid/Desktop/IntutiveCare/Schema/Relatorio_cadop.csv'
 
@@ -154,8 +154,8 @@ vl_saldo_final = replace(@vl_saldo_final, ',', '.');
 
 
 
-/*Pesquisa as 10 maiores operadoras do útlimo trimestre que tiveram despesas com 
-EVENTOS / SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR*/
+/*  Query to answer the follow up question: "Pesquisa as 10 maiores operadoras do útlimo trimestre que tiveram despesas com 
+EVENTOS / SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR"  */
 
 
 SELECT dados.reg_ans,
@@ -174,8 +174,8 @@ LIMIT 10;
 
 
 
-/*Pesquisa as 10 operadoras que mais tiveram despesas com "EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS
-  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR" no último ano? */
+/*  Query to answer the follow up question: "Pesquisa as 10 operadoras que mais tiveram despesas com "EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS
+  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR" no último ano?"  */
 
 
 
