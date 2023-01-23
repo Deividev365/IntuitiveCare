@@ -159,7 +159,7 @@ Exemplo: test04/feature/front end settings/finishing front end
 
 ```
 <h2>Desenvolvimento</h2>
-li>Isolar responsabilidades em pequenas funções em um arquivo "modules", ao criar arquivos independentes, garantimos a manuntenção futura do projeto ou incrementos</li>
+<li>Isolar responsabilidades em pequenas funções em um arquivo "modules", ao criar arquivos independentes, garantimos a manuntenção futura do projeto ou incrementos</li>
 
 ```
 def zip_files(files: list[str], dest):
