@@ -3,6 +3,7 @@ from zipfile import ZipFile
 import requests
 
 
+### path to save the downloaded files
 
 def downloadPath():
 
@@ -16,6 +17,7 @@ def downloadPath():
 
     return "./"
 
+### method to download the files from web
 
 def download_files(getAllFiles: list[str], path) -> list[str]:
 
@@ -32,6 +34,7 @@ def download_files(getAllFiles: list[str], path) -> list[str]:
     return files
     
 
+### method to save the files
 
 def save(request: requests.Response, file_path: str):
    
@@ -39,7 +42,7 @@ def save(request: requests.Response, file_path: str):
         for chunk in request.iter_content(chunk_size = 256):
             fd.write(chunk)
 
-
+### method to compact files
 
 def zip_files(files: list[str], dest):
     
@@ -50,9 +53,7 @@ def zip_files(files: list[str], dest):
 
 
 
-
-
-
+### method to after files downloaded, automatically delete it
 
 def cleanup(files):
 

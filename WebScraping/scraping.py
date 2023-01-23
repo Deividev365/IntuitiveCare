@@ -1,7 +1,6 @@
 ## Importing libs to support the project
-import os
-import re
 
+import re
 import requests
 from bs4 import BeautifulSoup
 
@@ -12,7 +11,7 @@ import modules
 url = "https://www.gov.br/ans/pt-br/assuntos/consumidor/o-que-o-seu-plano-de-saude-deve-cobrir-1/o-que-e-o-rol-de-procedimentos-e-evento-em-saude";
 
 
-### Inciando o processo de scraping
+### Starting process of scraping
 
 def scraping():
 
@@ -21,7 +20,7 @@ def scraping():
     
     soup = BeautifulSoup(page.content, 'html.parser')
 
-    ## For para pegar os elementos html de todos os documentos que serão baixados
+    ### Loop to get all the html documents elements that will be downloaded
 
     getAllFiles = [
         
@@ -32,10 +31,10 @@ def scraping():
 
         ]
 
-
+    ### setting up 
     files_path = modules.download_files(getAllFiles, path)
 
-    ## Compactar todos os arquivos baixados
+    ### Compress all downloaded files
 
     modules.zip_files(files_path, path + "deivid.zip")
     
@@ -44,7 +43,7 @@ def scraping():
 
 
 
-## Chamando a função scraping, principal do projeto
+## Calling the scraping function, the main part of the project
 
 if __name__ == '__main__':
     scraping()
